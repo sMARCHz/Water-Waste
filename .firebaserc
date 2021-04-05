@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "water-flow-5afb5": {
+      "hosting": {
+        "water-waste": [
+          "water-flow-5afb5"
+        ]
+      }
+    }
+  }
+}

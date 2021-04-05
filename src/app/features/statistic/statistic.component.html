@@ -1,0 +1,21 @@
+<div class="stat-container">
+    <h2 class="row center-main">Compare amount of water you waste</h2>
+    <div class="row space-around">
+        <div class="col center-cross">
+            <h2>Yesterday</h2>
+            <div class="row center-cross">
+                <h2>{{ yesterdaySum }}</h2>
+                <span class="unit">m<sup>3</sup>/s</span>
+            </div>
+        </div>
+        <div class="col center-cross">
+            <h2>Today</h2>
+            <div class="row center-cross">
+                <h2>{{ todaySum }}</h2>
+                <span class="unit">m<sup>3</sup>/s</span>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="todaySum > yesterdaySum" class="row center-main compare greater">You waste more water today than yesterday</div>
+    <div *ngIf="todaySum < yesterdaySum" class="row center-main compare less">You waste less water today than yesterday</div>
+</div>
