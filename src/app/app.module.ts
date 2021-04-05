@@ -9,7 +9,7 @@ import { ChartComponent } from './features/chart/chart.component';
 import { StatisticComponent } from './features/statistic/statistic.component';
 
 import { DatePipe } from '@angular/common';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
 
 @NgModule({
   declarations: [
