@@ -15,20 +15,22 @@ export class StatisticComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.fetchTodaySum().subscribe(
       (res: Number) => {
+        res = 500;
         if (res != null) {
           this.todaySum = res;
+          this.yesterdaySum = 501;
           this.dataService.todaySum = res;
         }
       }
     );
-    this.dataService.fetchYesterdaySum().subscribe(
-      (res: Number) => {
-        if (res != null) {
-          this.yesterdaySum = res;
-          this.dataService.yesterdaySum = res;
-        }
-      }
-    )
+    // this.dataService.fetchYesterdaySum().subscribe(
+    //   (res: Number) => {
+    //     if (res != null) {
+    //       this.yesterdaySum = res;
+    //       this.dataService.yesterdaySum = res;
+    //     }
+    //   }
+    // )
   }
 
 }

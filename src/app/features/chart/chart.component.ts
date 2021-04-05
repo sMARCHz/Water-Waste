@@ -21,7 +21,6 @@ export class ChartComponent implements OnInit {
     this.dataService.fetchTodayRate().subscribe(
       (res) => {
         this.todayRate = res;
-        console.log(`Rate: ${res}`);
         let data;
         if (this.todayRate == null) {
           data = [];
@@ -40,7 +39,7 @@ export class ChartComponent implements OnInit {
               data: data,
               fill: false,
               lineTension: 0.3,
-              borderColor: "DodgerBlue",
+              borderColor: "#58cffa",
               borderWidth: 2
             }]
           },
