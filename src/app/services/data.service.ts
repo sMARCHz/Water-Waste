@@ -13,8 +13,8 @@ export class DataService {
   constructor(private datePipe: DatePipe, private firebase: AngularFireDatabase) { }
 
   fetchTodayRate() {
-    let today = new Date(2021, 3, 2);
-    // let today = new Date();
+    // let today = new Date(2021, 3, 2);
+    let today = new Date();
     let formatedDate = this.datePipe.transform(today, 'yyyy-MM-dd');
     return this.firebase.object(`${formatedDate}/rate`).valueChanges();
   }
